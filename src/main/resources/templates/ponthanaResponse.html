@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>pandit</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/ponthanaResponse.css}" />
+	</head>						
+	<body>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h3>వివాహ పొంతనలు</h3>
+		<div class="main">
+			<table>
+			 	<tr>
+					<th></th>
+					<th>వధువు</th>
+					<th>వరుడు</th>
+					<th>పొంతన</th>
+				</tr>
+			 	<tr th:each="i: ${#numbers.sequence(0, Ponthana.headings.length - 1)}">
+					<td th:text="${Ponthana.headings[i]}" />
+				    <td th:text="${Ponthana.vadhuvuDetails[i]}" />
+				    <td th:text="${Ponthana.varuduDetails[i]}" />
+				    <td></td>
+				</tr>
+			</table>
+		  </div>
+		
+	</body>
+</html>

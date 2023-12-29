@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+	<head> 
+		<link href='https://fonts.googleapis.com/css?family=Noto Serif Telugu' rel='stylesheet'>
+	    <title>pandit</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <link rel="stylesheet" type="text/css" th:href="@{/assets/ponthanaRequest.css}" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="login_box">
+				<div class="login-header">
+					<span>వివాహ పొంతనలు</span>
+		    	</div>
+	    <form action="#" th:action="@{/nakshatram/ponthana}" th:object="${pontanaRequestDTO}" method="post">
+			<div class="input_box">
+		    	<input type="text" id="varuduPeru" class="input-field" th:field="*{varuduPeru}" name="varuduPeru" required>
+		      	<label for="varuduPeru" class="label">వరుని పేరు</label>
+		    </div>
+		    <div class="input_box">
+		    	<select id="varuduNakshtram" class="input-field" th:field="*{varuduNakshtram}" name="varuduNakshtram" required>
+			      	<option value="0">వరుని నక్షత్రం</option>
+				    <option th:each="nakshatram : ${Nakshatrams}" th:value="${nakshatram}" th:text="${nakshatram}"></option>
+			    </select>
+		    </div>
+		    <div class="input_box">
+		    	<input type="text" id="varuduPaadam" class="input-field" th:field="*{varuduPaadam}" name="varuduPaadam" required>
+		      	<label for="varuduPaadam" class="label">వరుని పాదం</label>
+		    </div>
+		    
+		    <div class="input_box">
+		    	<input type="text" id="vadhuvuPeru" class="input-field" th:field="*{vadhuvuPeru}" name="vadhuvuPeru" required>
+		      	<label for="vadhuvuPeru" class="label">వధువు పేరు</label>
+		    </div>
+		    <div class="input_box">
+		    	<select id="vadhuvuNakshatram" class="input-field" th:field="*{vadhuvuNakshatram}" name="vadhuvuNakshatram" required>
+			      	<option value="0">వధువు నక్షత్రం</option>
+				    <option th:each="nakshatram : ${Nakshatrams}" th:value="${nakshatram}" th:text="${nakshatram}"></option>
+			    </select>
+		    </div>
+		    <!--<div class="input_box">
+		    	<input type="text" id="vadhuvuNakshatram" class="input-field" th:field="*{vadhuvuNakshatram}" name="vadhuvuNakshatram" required>
+		      	<label for="vadhuvuNakshatram" class="label">వధువు నక్షత్రం</label>	
+		    </div>-->
+		    <div class="input_box">
+		    	<input type="text" id="vadhuvuPaadam" class="input-field" th:field="*{vadhuvuPaadam}" name="vadhuvuPaadam" required>
+		      	<label for="vadhuvuPaadam" class="label">వధువు పాదం</label>
+		    </div>
+		    
+	        <input type="submit" value="Submit" class="input-submit"/> <!--<input type="reset" value="Reset" />-->
+	    </form>
+			</div>
+		</div>
+	</body>
+</html>

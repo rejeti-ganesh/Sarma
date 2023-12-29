@@ -1,0 +1,56 @@
+/*
+#926927 - dark golden brown - main color
+#6d480a - sepia
+#fffaf0 - floral white - szöveg színe
+#111111 - night
+#32161f - dark purple
+*/
+
+body{
+  background:rgb(192, 192, 192);;
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.header {
+  padding: 80px;
+  text-align: center;
+  background: rgb(192, 192, 192);
+  color: rgb(0, 0, 0);
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+h3{
+  color:black;
+  text-align:center;
+}
+
+.main { 
+  display:flex;
+  flex: 70%;
+  background-color: rgb(255, 255, 128);
+ /* padding: 20px;*/
+  justify-content:center;
+  align-items:center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size:16px;
+}
+
+th, td {
+  text-align: center;
+  padding: 4px;
+  border: 1px solid black;
+}
+
+tr{
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0)
+}
